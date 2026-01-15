@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Demo Café</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Demo Café</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="menu.html" class="nav-link">Menu</a></li>
+                <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Hero -->
+    <section class="menu-hero">
+        <div class="menu-hero-content">
+            <h1>Our Menu</h1>
+            <p>Discover our carefully crafted selection of coffee, food, and desserts</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- Coffee & Drinks -->
+            <div class="menu-category">
+                <h2 class="category-title">
+                    <i class="fas fa-coffee"></i> Coffee & Drinks
+                </h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Espresso">
+                        <div class="menu-item-info">
+                            <h3>Espresso</h3>
+                            <p>Rich, bold shot of our signature blend</p>
+                            <span class="menu-price">₹120</span>
+                            <button class="order-btn" onclick="orderItem('Espresso', 120)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cappuccino">
+                        <div class="menu-item-info">
+                            <h3>Cappuccino</h3>
+                            <p>Perfect balance of espresso, steamed milk, and foam</p>
+                            <span class="menu-price">₹180</span>
+                            <button class="order-btn" onclick="orderItem('Cappuccino', 180)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Latte">
+                        <div class="menu-item-info">
+                            <h3>Latte</h3>
+                            <p>Smooth espresso with steamed milk</p>
+                            <span class="menu-price">₹200</span>
+                            <button class="order-btn" onclick="orderItem('Latte', 200)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1463936575829-25148e1db1b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cold Brew">
+                        <div class="menu-item-info">
+                            <h3>Cold Brew</h3>
+                            <p>24-hour steeped coffee, smooth and refreshing</p>
+                            <span class="menu-price">₹220</span>
+                            <button class="order-btn" onclick="orderItem('Cold Brew', 220)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Iced Mocha">
+                        <div class="menu-item-info">
+                            <h3>Iced Mocha</h3>
+                            <p>Espresso with chocolate and cold milk over ice</p>
+                            <span class="menu-price">₹250</span>
+                            <button class="order-btn" onclick="orderItem('Iced Mocha', 250)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Americano">
+                        <div class="menu-item-info">
+                            <h3>Americano</h3>
+                            <p>Espresso with hot water, bold and smooth</p>
+                            <span class="menu-price">₹150</span>
+                            <button class="order-btn" onclick="orderItem('Americano', 150)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Macchiato">
+                        <div class="menu-item-info">
+                            <h3>Macchiato</h3>
+                            <p>Espresso "marked" with steamed milk foam</p>
+                            <span class="menu-price">₹190</span>
+                            <button class="order-btn" onclick="orderItem('Macchiato', 190)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flat White">
+                        <div class="menu-item-info">
+                            <h3>Flat White</h3>
+                            <p>Velvety microfoam over double espresso</p>
+                            <span class="menu-price">₹210</span>
+                            <button class="order-btn" onclick="orderItem('Flat White', 210)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Food -->
+            <div class="menu-category">
+                <h2 class="category-title">
+                    <i class="fas fa-utensils"></i> Food
+                </h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="https://img.freepik.com/free-photo/delicious-vegan-pizza-social-post_23-2151895448.jpg?semt=ais_hybrid&w=740&q=80">
+                            <h3>Wood-fired Pizza</h3>
+                            <p>Authentic Italian pizza with fresh mozzarella and basil</p>
+                            <span class="menu-price">₹450</span>
+                            <button class="order-btn" onclick="orderItem('Wood-fired Pizza', 450)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pasta">
+                        <div class="menu-item-info">
+                            <h3>Pasta Alfredo</h3>
+                            <p>Creamy fettuccine with parmesan and herbs</p>
+                            <span class="menu-price">₹380</span>
+                            <button class="order-btn" onclick="orderItem('Pasta Alfredo', 380)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sandwich">
+                        <div class="menu-item-info">
+                            <h3>Grilled Sandwich</h3>
+                            <p>Fresh vegetables and cheese in toasted bread</p>
+                            <span class="menu-price">₹280</span>
+                            <button class="order-btn" onclick="orderItem('Grilled Sandwich', 280)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Avocado Toast">
+                        <div class="menu-item-info">
+                            <h3>Avocado Toast</h3>
+                            <p>Fresh avocado on artisanal bread with cherry tomatoes</p>
+                            <span class="menu-price">₹320</span>
+                            <button class="order-btn" onclick="orderItem('Avocado Toast', 320)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Vegan Bowl">
+                        <div class="menu-item-info">
+                            <h3>Vegan Bowl</h3>
+                            <p>Quinoa, fresh vegetables, and tahini dressing</p>
+                            <span class="menu-price">₹350</span>
+                            <button class="order-btn" onclick="orderItem('Vegan Bowl', 350)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burger">
+                        <div class="menu-item-info">
+                            <h3>Gourmet Burger</h3>
+                            <p>Juicy patty with caramelized onions and special sauce</p>
+                            <span class="menu-price">₹420</span>
+                            <button class="order-btn" onclick="orderItem('Gourmet Burger', 420)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salad">
+                        <div class="menu-item-info">
+                            <h3>Caesar Salad</h3>
+                            <p>Crisp romaine lettuce with parmesan and croutons</p>
+                            <span class="menu-price">₹300</span>
+                            <button class="order-btn" onclick="orderItem('Caesar Salad', 300)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Soup">
+                        <div class="menu-item-info">
+                            <h3>Tomato Basil Soup</h3>
+                            <p>Creamy soup with fresh basil and croutons</p>
+                            <span class="menu-price">₹220</span>
+                            <button class="order-btn" onclick="orderItem('Tomato Basil Soup', 220)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-category">
+                <h2 class="category-title">
+                    <i class="fas fa-cookie-bite"></i> Desserts
+                </h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Brownie">
+                        <div class="menu-item-info">
+                            <h3>Chocolate Brownie</h3>
+                            <p>Warm chocolate brownie with vanilla ice cream</p>
+                            <span class="menu-price">₹220</span>
+                            <button class="order-btn" onclick="orderItem('Chocolate Brownie', 220)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pancakes">
+                        <div class="menu-item-info">
+                            <h3>Pancakes</h3>
+                            <p>Fluffy pancakes with maple syrup and fresh berries</p>
+                            <span class="menu-price">₹280</span>
+                            <button class="order-btn" onclick="orderItem('Pancakes', 280)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cheesecake">
+                        <div class="menu-item-info">
+                            <h3>New York Cheesecake</h3>
+                            <p>Creamy cheesecake with berry compote</p>
+                            <span class="menu-price">₹320</span>
+                            <button class="order-btn" onclick="orderItem('New York Cheesecake', 320)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Croissant">
+                        <div class="menu-item-info">
+                            <h3>Butter Croissant</h3>
+                            <p>Flaky, buttery croissant served with jam</p>
+                            <span class="menu-price">₹180</span>
+                            <button class="order-btn" onclick="orderItem('Butter Croissant', 180)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chocolate Cake">
+                        <div class="menu-item-info">
+                            <h3>Chocolate Lava Cake</h3>
+                            <p>Warm chocolate cake with molten center</p>
+                            <span class="menu-price">₹350</span>
+                            <button class="order-btn" onclick="orderItem('Chocolate Lava Cake', 350)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tiramisu">
+                        <div class="menu-item-info">
+                            <h3>Tiramisu</h3>
+                            <p>Classic Italian dessert with coffee and mascarpone</p>
+                            <span class="menu-price">₹290</span>
+                            <button class="order-btn" onclick="orderItem('Tiramisu', 290)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Macarons">
+                        <div class="menu-item-info">
+                            <h3>French Macarons</h3>
+                            <p>Delicate macarons in assorted flavors</p>
+                            <span class="menu-price">₹380</span>
+                            <button class="order-btn" onclick="orderItem('French Macarons', 380)">Order Now</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ice Cream">
+                        <div class="menu-item-info">
+                            <h3>Artisan Ice Cream</h3>
+                            <p>Premium ice cream with seasonal toppings</p>
+                            <span class="menu-price">₹240</span>
+                            <button class="order-btn" onclick="orderItem('Artisan Ice Cream', 240)">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Demo Café</h3>
+                    <p>Where Every Sip Feels Special</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> hello@democafe.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 2nd Floor, Urban Square Mall, MG Road, Bengaluru</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Hours</h4>
+                    <p>Monday - Sunday</p>
+                    <p>10:00 AM - 11:30 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Demo Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Action Buttons -->
+    <div class="sticky-buttons">
+        <a href="reservation.html" class="sticky-btn sticky-book">
+            <i class="fas fa-calendar-alt"></i> Book Table
+        </a>
+        <a href="tel:+919876543210" class="sticky-btn sticky-call">
+            <i class="fas fa-phone"></i> Call Now
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
